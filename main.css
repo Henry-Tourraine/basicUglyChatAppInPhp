@@ -1,0 +1,59 @@
+.error{
+    background: rgb(194, 94, 94);
+    border: solid red 2px;
+    width: fit-content;
+}
+.exact{
+    background: rgb(94, 194, 102);
+    border: solid rgb(23, 133, 9) 2px;
+    width: fit-content;
+}
+
+.form{
+    margin: auto;
+    width: fit-content;
+    padding: 3em;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+}
+.inputWrapper{
+    padding: 0em;
+    margin: 2em;
+    position: relative;
+}
+.inputWrapper label{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.inputWrapper input::placeholder{
+    opacity: 0;
+}
+.inputWrapper > input:focus + label, .inputWrapper > input:active + label{
+    transform: translate(0, -2em);
+}
+
+.inputWrapper > input:not(:placeholder-shown)+ label{
+    transform: translate(0, -2em);
+}
+
+.buttonEnabled{
+    font-size: 2em;
+    color: white;
+    background: linear-gradient(to right, rgba(255, 150, 20, 1), rgba(20, 150, 255, 1));
+    padding: 0.5em;
+    border: none;
+    border-radius: 5vh;
+    cursor: pointer;
+}
+.buttonDisabled{
+    font-size: 2em;
+    color: white;
+    background: linear-gradient(to right, rgba(255, 150, 20, 0.5), rgba(20, 150, 255, 0.5));
+    padding: 0.5em;
+    border: none;
+    border-radius: 5vh;
+    cursor: pointer;
+}
